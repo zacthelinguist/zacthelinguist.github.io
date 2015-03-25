@@ -14,12 +14,12 @@ var verben = verbenGet();
 var adverb = adverbGet();
 var place = placeGet();
 var uhh = uhhGet();
-var z = Math.floor((Math.random() * 21) + 1);
+var z = Math.floor((Math.random() * 26) + 1);
 if (z == 1){rel = "reminds you of " + place;}
 else if (z == 2){rel = "is surprisingly heavy";}
 else if (z == 3){rel = gerund + " if " + verben;}
-else if (z == 4){rel = "feels warm to the touch";}
-else if (z == 5){rel = "feels cool to the touch";}
+else if (z == 4){rel = taste + " even though it " + smell;}
+else if (z == 5){rel = look + " even though it " + feeling;}
 else if (z == 6){rel = gerund + adverb;}
 else if (z == 7){rel = "seems normal";}
 else if (z == 8){rel = "seems valuable";}
@@ -35,7 +35,12 @@ else if (z == 17){rel = taste;}
 else if (z == 18){rel = feeling;}
 else if (z == 19){rel = feeling + " when " + verben;}
 else if (z == 20){rel = "is otherwise uninteresting";}
-else if (z == 11){rel = smell;}
+else if (z == 21){rel = smell;}
+else if (z == 22){rel = "seems holy"}
+else if (z == 23){rel = look + " when " + verben;}
+else if (z == 24){rel = "stirs a distant emotion in you";}
+else if (z == 25){rel = "stirs a distant emotion in you when " + verben;}
+else if (z == 26){rel = feeling + " when " + verben;}
 return rel;
 }
 
@@ -262,7 +267,7 @@ var smell = "smells " + y;
 return smell;	}
 
 function feelGet(){
-var x = Math.floor((Math.random() * 20) + 1);
+var x = Math.floor((Math.random() * 22) + 1);
 if (x == 1){y = "heavier than it looks";}
 else if (x == 2){y = "very soft";}
 else if (x == 3){y = "rough to the touch";}
@@ -279,6 +284,8 @@ else if (x == 13){y = "sandy";}
 else if (x == 14){y = "off-balance";}
 else if (x == 15){y = "sturdy";}
 else if (x == 16){y = "surprisingly sticky";}
+else if (x == 17){y = "warm to the touch";}
+else if (x == 18){y = "cool to the touch";}
 else {y = "hollow";}
 var feel = "feels " + y;
 return feel;	}
