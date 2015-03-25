@@ -1,0 +1,742 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Trinkets</title>
+<script>
+
+function relGet(){
+var look = lookGet();
+var taste = tasteGet();
+var feeling = feelGet();
+var gerund = gerundGet();
+var verben = verbenGet();
+var adverb = adverbGet();
+var place = placeGet();
+var uhh = uhhGet();
+var z = Math.floor((Math.random() * 20) + 1);
+if (z == 1){rel = "reminds you of " + place;}
+else if (z == 2){rel = "is surprisingly heavy";}
+else if (z == 3){rel = gerund + " if " + verben;}
+else if (z == 4){rel = "feels warm to the touch";}
+else if (z == 5){rel = "feels cool to the touch";}
+else if (z == 6){rel = gerund + adverb;}
+else if (z == 7){rel = "seems normal";}
+else if (z == 8){rel = "seems valuable";}
+else if (z == 9){rel = "fits in your pocket";}
+else if (z == 10){rel = "calls out to you" + adverb;}
+else if (z == 11){rel = "wouldn't be out of place near " + place;}
+else if (z == 12){rel = "is unusually light";}
+else if (z == 13){rel = gerund + adverb + " when " + verben;}
+else if (z == 14){rel = gerund + adverb + " when " + verben;}
+else if (z == 15){rel = gerund + adverb + " when " + verben;}
+else if (z == 16){rel = look;}
+else if (z == 17){rel = taste;}
+else if (z == 18){rel = feeling;}
+else if (z == 19){rel = feeling + " when " + verben;}
+else if (z == 20){rel = "is otherwise uninteresting";}
+return rel;
+}
+
+function colorGet(){
+var x = Math.floor((Math.random() * 31) + 1);
+var z = Math.floor((Math.random() * 10) + 1);
+if (x == 1){y = "black";}
+else if (x == 2){y = "white";}
+else if (x == 3){y = "blue";}
+else if (x == 4){y = "red";}
+else if (x == 5){y = "yellow";}
+else if (x == 6){y = "green";}
+else if (x == 7){y = "pink";}
+else if (x == 8){y = "orange";}
+else if (x == 9){y = "purple";}
+else if (x == 10){y = "grey";}
+else if (x == 11){y = "brown";}
+else if (x == 12){y = "off-white";}
+else if (x == 13){y = "rusty";}
+else if (x == 14){y = "maleable";}
+else if (x == 15){y = "jet black";}
+else if (x == 16){y = "golden";}
+else if (x == 17){y = "tawny";}
+else if (x == 18){y = "tan";}
+else if (x == 19){y = "bright";}
+else if (x == 20){y = "dull";}
+else if (x == 21){y = "shiny";}
+else if (x == 22){y = "smokey";}
+else if (x == 23){y = "lavender";}
+else if (x == 24){y = "crimson";}
+else if (x == 25){y = "opaque";}
+else if (x == 26){y = "glowing";}
+else if (x == 27){y = "dark";}
+else if (x == 28){y = "bright";}
+else if (x == 29){y = "mottled";}
+else if (x == 30){y = "violet";}
+else if (x == 31){y = "translucent";}
+
+if (z > 6 && (x!=31&& x!=28&& x!=19&& x!=20&& x!=14&& x!=13&& x!=29&& x!=26&& x!=22&&x!=25&&x!=21) ){y = y + "-painted";}
+else {y = y;}
+return y;	}
+
+function ofGet(){
+var bone = boneGet();
+var x = Math.floor((Math.random() * 20) + 1);
+if (x == 1){y = " of " + bone + " teeth";}
+else if (x == 2){y = " of whiskey";}
+else if (x == 3){y = " of ale";}
+else if (x == 4){y = " of " + bone + " blood";}
+else if (x == 5){y = " of sand";}
+else if (x == 6){y = " of smoke";}
+else if (x == 7){y = " of oil";}
+else if (x == 8){y = " of water";}
+else if (x == 9){y = " of tea";}
+else if (x == 10){y = " of broken glass";}
+else if (x == 11){y = " of perfume";}
+else if (x == 12){y = " of hair";}
+else if (x == 13){y = " of ink";}
+else if (x == 14){y = " of " + bone + " and " + bone + " blood";}
+else if (x == 15){y = " of pebbles";}
+else {y = "";}
+				return y;	}
+
+function numGet(){
+var x = Math.floor((Math.random() * 16) + 1);
+if (x == 1){y = "two";}
+else if (x == 2){y = "three";}
+else if (x == 3){y = "four";}
+else if (x == 4){y = "five";}
+else if (x == 5){y = "six";}
+else if (x == 6){y = "seven";}
+else if (x == 7){y = "ten";}
+else if (x == 8){y = "several";}
+else if (x == 9){y = "a few";}
+else if (x == 10){y = "innumerable";}
+else if (x == 11){y = "twenty-one";}
+else {y = "";}
+				return y;	}
+				
+function markadjGet(){
+var x = Math.floor((Math.random() * 10) + 1);
+if (x == 1){y = "deep";}
+else if (x == 2){y = "shallow";}
+else if (x == 3){y = "light";}
+else if (x == 4){y = "faint";}
+else if (x == 5){y = "rough";}
+else if (x == 6){y = "unique";}
+else {y = "";}
+				return y;	}
+				
+function markGet(){
+var adj = markadjGet();
+var x = Math.floor((Math.random() * 11) + 1);
+if (x == 1){y = "scratches";}
+else if (x == 2){y = "gouges";}
+else if (x == 3){y = "cuts";}
+else if (x == 4){y = "scrapes";}
+else if (x == 5){y = "notches";}
+else if (x == 6){y = "pivots";}
+else if (x == 7){y = "dimples";}
+else if (x == 8){y = "bumps";}
+else if (x == 9){y = "protrusions";}
+else if (x == 10){y = "divots";}
+else if (x == 11){y = "ridges";}
+var mark = adj + " " + y;
+				return mark;	}
+				
+function kindGet(){
+var x = Math.floor((Math.random() * 10) + 1);
+if (x == 1){y = "man";}
+else if (x == 2){y = "woman";}
+else if (x == 3){y = "child";}
+else if (x == 4){y = "baby";}
+else if (x == 5){y = "king";}
+else if (x == 6){y = "queen";}
+else if (x == 7){y = "woman with exposed breast";}
+else if (x == 8){y = "man with a big dong";}
+else if (x == 9){y = "woman with exposed genitals";}
+else if (x == 10){y = "man with exposed genitals";}
+				return y;	}
+				
+function sizeGet(){
+var x = Math.floor((Math.random() * 15) + 1);
+if (x == 1){y = "apple";}
+else if (x == 2){y = "fist";}
+else if (x == 3){y = "palm";}
+else if (x == 4){y = "acorn";}
+else if (x == 5){y = "medium";}
+else if (x == 6){y = "onion";}
+else if (x == 7){y = "pebble";}
+else if (x == 8){y = "palm";}
+else if (x == 9){y = "smaller";}
+else if (x == 10){y = "larger";}
+else if (x == 11){y = "walnut";}
+else if (x == 12){y = "thumb";}
+else if (x == 13){y = "pinky";}
+else if (x == 14){y = "weirdly";}
+else if (x == 15){y = "full";}
+				return y;	}
+	
+function adverbGet(){
+var x = Math.floor((Math.random() * 27) + 1);
+if (x == 1){y = " faintly";}
+else if (x == 2){y = " sporadically";}
+else if (x == 3){y = "  just a little bit";}
+else if (x == 4){y = " once in a while";}
+else if (x == 5){y = " incessantly";}
+else if (x == 6){y = " at night";}
+else if (x == 7){y = " softly";}
+else if (x == 8){y = " lightly";}
+else if (x == 9){y = " silently";}
+else if (x == 10){y = " every few minutes";}
+else if (x == 11){y = " during the day";}
+else if (x == 12){y = " sadly";}
+else if (x == 13){y = " harshly";}
+else if (x == 14){y = " often";}
+else if (x == 15){y = " oddly";}
+else if (x == 16){y = " iteratively";}
+else if (x == 17){y = " shyly";}
+else if (x == 18){y = " sleepily";}
+else if (x == 19){y = " just a tad";}
+else if (x == 20){y = " sloppily";}
+else if (x == 21){y = " soothingly";}
+else if (x == 22){y = " annoyingly";}
+else {y = "";}
+				return y;	}
+				
+function statueGet(){
+var kind = kindGet();
+var x = Math.floor((Math.random() * 30) + 1);
+if (x == 1){y = " of a frog";}
+else if (x == 2){y = " of a human " + kind;}
+else if (x == 3){y = " of a Dwarven " + kind;}
+else if (x == 4){y = " of an Elven " + kind;}
+else if (x == 5){y = " of an Orcish " + kind;}
+else if (x == 6){y = " of a dragon";}
+else if (x == 7){y = " of a snake";}
+else if (x == 8){y = " of a chicken";}
+else if (x == 9){y = " of a boat";}
+else if (x == 10){y = " of a bird";}
+else if (x == 11){y = " of a horse";}
+else if (x == 12){y = " of an apple";}
+else if (x == 13){y = " of an ox";}
+else if (x == 14){y = " of a deity";}
+else if (x == 15){y = " of an Ogre";}
+else if (x == 16){y = " of a wagon";}
+else if (x == 17){y = " of a cat";}
+else if (x == 18){y = " of a dog";}
+else if (x == 19){y = " of a fish";}
+else if (x == 20){y = " of a mouse";}
+else if (x == 21){y = " of an indecent act";}
+else if (x == 22){y = " of a grapefruit";}
+else if (x == 23){y = " of barrel";}
+else if (x == 24){y = " of a toad";}
+else if (x == 25){y = " of a turtle";}
+else if (x == 26){y = " of a leaf";}
+else if (x == 27){y = " of a pumpkin";}
+else if (x == 28){y = " of the moon";}
+else if (x == 29){y = " of the sun";}
+else if (x == 30){y = " of a very familiar face";}
+				return y;	}
+				
+function smellGet(){
+var x = Math.floor((Math.random() * 18) + 1);
+if (x == 1){y = "like flowers";}
+else if (x == 2){y = "like home";}
+else if (x == 3){y = "like fruit";}
+else if (x == 4){y = "like smoke";}
+else if (x == 5){y = "like body odor";}
+else if (x == 6){y = "like shit";}
+else if (x == 7){y = "a bit sour";}
+else if (x == 8){y = "kinda gross";}
+else if (x == 9){y = "very fresh";}
+else if (x == 10){y = "very strongly";}
+else if (x == 11){y = "like smoke";}
+else if (x == 12){y = "quite pleasant";}
+else if (x == 13){y = "a bit off";}
+else if (x == 14){y = "very familiar";}
+else if (x == 15){y = "moldy";}
+else if (x == 16){y = "musty";}
+else if (x == 17){y = "citrusy";}
+else if (x == 18){y = "like weak tea";}
+var smell = "smells " + y;
+return smell;	}
+
+function feelGet(){
+var x = Math.floor((Math.random() * 20) + 1);
+if (x == 1){y = "heavier than it looks";}
+else if (x == 2){y = "very soft";}
+else if (x == 3){y = "rough to the touch";}
+else if (x == 4){y = "slippery";}
+else if (x == 5){y = "kind of damp";}
+else if (x == 6){y = "well-balanced";}
+else if (x == 7){y = "a bit top-heavy";}
+else if (x == 8){y = "brittle";}
+else if (x == 9){y = "rather flimsy";}
+else if (x == 10){y = "too light for its size";}
+else if (x == 11){y = "dented";}
+else if (x == 12){y = "squishy";}
+else if (x == 13){y = "sandy";}
+else if (x == 14){y = "off-balance";}
+else if (x == 15){y = "sturdy";}
+else if (x == 16){y = "surprisingly sticky";}
+else {y = "hollow";}
+var feel = "feels " + y;
+return feel;	}
+
+function tasteGet(){
+var x = Math.floor((Math.random() * 20) + 1);
+if (x == 1){y = "like strawberries";}
+else if (x == 2){y = "like blood";}
+else if (x == 3){y = "like metal";}
+else if (x == 4){y = "like grass";}
+else if (x == 5){y = "like nothing";}
+else if (x == 6){y = "salty";}
+else if (x == 7){y = "a bit off";}
+else if (x == 8){y = "sweet";}
+else if (x == 9){y = "bitter";}
+else if (x == 10){y = "sour";}
+else if (x == 11){y = "like wine";}
+else if (x == 12){y = "like vinegar";}
+else if (x == 13){y = "like dirt";}
+else if (x == 14){y = "kind of acidic";}
+else if (x == 15){y = "a little bland";}
+else if (x == 16){y = "just like chicken";}
+else if (x == 17){y = "overly sweet";}
+else if (x == 18){y = "undercooked";}
+else if (x == 19){y = "smoky";}
+else if (x == 20){y = "like ash";}
+var taste = "tastes " + y;
+return taste;	}
+				
+function lookGet(){
+var x = Math.floor((Math.random() * 20) + 1);
+if (x == 1){y = "a little misshapen";}
+else if (x == 2){y = "kind of bent";}
+else if (x == 3){y = "well worn";}
+else if (x == 4){y = "like new";}
+else if (x == 5){y = "ancient";}
+else if (x == 6){y = "kind of cheap";}
+else if (x == 7){y = "more or less normal";}
+else if (x == 8){y = "a little strange";}
+else if (x == 9){y = "shiny";}
+else if (x == 10){y = "like a good investment";}
+else if (x == 11){y = "kind of dangerous";}
+else if (x == 12){y = "brand new";}
+else if (x == 13){y = "like a toy";}
+else if (x == 14){y = "dirty";}
+else if (x == 15){y = "a bit stained";}
+else if (x == 16){y = "way too small";}
+else if (x == 17){y = "very familiar";}
+else if (x == 18){y = "mysterious";}
+else if (x == 19){y = "like a waste of time";}
+else if (x == 20){y = "uneven";}
+var look = "looks " + y;
+return look;	}
+
+function uhhGet(){
+var x = Math.floor((Math.random() * 20) + 1);
+if (x == 1){y = "might make for a good gift";}
+else if (x == 2){y = "is probably worthless";}
+else if (x == 3){y = "seems relatively harmless";}
+else if (x == 4){y = "probably isn't edible";}
+else if (x == 5){y = "might be useful";}
+else if (x == 6){y = "will bother you if you don't take it with you";}
+else if (x == 7){y = "doesn't seem to belong here";}
+else if (x == 8){y = "would look nice on a shelf";}
+else if (x == 9){y = "fits in your hand pretty well";}
+else if (x == 10){y = "wouldn't make a good hat";}
+else if (x == 11){y = "has probably been through a lot";}
+else if (x == 12){y = "was probably stolen";}
+else if (x == 13){y = "is obviously magnetic";}
+else if (x == 14){y = "won't be missed";}
+else if (x == 15){y = "would bother you if you didn't hold on to it";}
+else if (x == 16){y = "is obviously unimportant";}
+else if (x == 17){y = "has few, if any, potential uses";}
+else if (x == 18){y = "will break your heart if you let it";}
+else if (x == 19){y = "could hurt someone";}
+else if (x == 20){y = "was well cared-for in a previous life";}
+var uhh = y;
+return uhh;	}
+
+function langGet(){
+var x = Math.floor((Math.random() * 10) + 1);
+if (x == 1){y = "Common";}
+else if (x == 2){y = "Elven";}
+else if (x == 3){y = "Orcish";}
+else if (x == 4){y = "Dwarven";}
+else if (x == 5){y = "Draconic";}
+else if (x == 6){y = "Gnomic";}
+else if (x == 7){y = "wizardly";}
+else if (x == 8){y = "Goblin";}
+else if (x == 9){y = "Supernal";}
+else if (x == 10){y = "Abyssal";}
+				return y;	}
+				
+function placeGet(){
+var x = Math.floor((Math.random() * 18) + 1);
+if (x == 1){y = "home";}
+else if (x == 2){y = "Port Signorr";}
+else if (x == 3){y = "your travels";}
+else if (x == 4){y = "the north";}
+else if (x == 5){y = "the south";}
+else if (x == 6){y = "the sea";}
+else if (x == 7){y = "the woods";}
+else if (x == 8){y = "the city";}
+else if (x == 9){y = "a lake";}
+else if (x == 10){y = "the road";}
+else if (x == 11){y = "adventure";}
+else if (x == 12){y = "the east";}
+else if (x == 13){y = "the west";}
+else if (x == 14){y = "the mountains";}
+else if (x == 15){y = "the sea shore";}
+else if (x == 16){y = "town";}
+else if (x == 17){y = "the swamp";}
+else if (x == 18){y = "a castle";}
+				return y;	}
+				
+function gerundGet(){
+var x = Math.floor((Math.random() * 25) + 1);
+if (x == 1){y = "hums";}
+else if (x == 2){y = "glows";}
+else if (x == 3){y = "rings";}
+else if (x == 4){y = "glitters";}
+else if (x == 5){y = "bothers you";}
+else if (x == 6){y = "vibrates";}
+else if (x == 7){y = "burns";}
+else if (x == 8){y = "shudders";}
+else if (x == 9){y = "jangles";}
+else if (x == 10){y = "levitates";}
+else if (x == 11){y = "moans";}
+else if (x == 12){y = "confuses you";}
+else if (x == 13){y = "calms your nerves";}
+else if (x == 14){y = "glints";}
+else if (x == 15){y = "sparkles";}
+else if (x == 16){y = "rotates";}
+else if (x == 17){y = "shines";}
+else if (x == 18){y = "wobbles";}
+else if (x == 19){y = "splinters";}
+else if (x == 20){y = "shivers";}
+else {y = "rattles";}
+				return y;	}
+				
+								
+function verbenGet(){
+var x = Math.floor((Math.random() * 25) + 1);
+if (x == 1){y = "held";}
+else if (x == 2){y = "struck";}
+else if (x == 3){y = "spun";}
+else if (x == 4){y = "you rub it";}
+else if (x == 5){y = "rotated";}
+else if (x == 6){y = "tapped";}
+else if (x == 7){y = "pinched";}
+else if (x == 8){y = "picked up";}
+else if (x == 9){y = "examined";}
+else if (x == 10){y = "pocketed";}
+else if (x == 11){y = "squeezed";}
+else if (x == 12){y = "just sitting there";}
+else if (x == 13){y = "kissed";}
+else if (x == 14){y = "exposed to light";}
+else if (x == 15){y = "touched";}
+else if (x == 16){y = "you think about it";}
+else if (x == 17){y = "left alone";}
+else if (x == 18){y = "you want it to";}
+else if (x == 19){y = "dropped";}
+else if (x == 20){y = "wet";}
+else if (x == 21){y = "held aloft";}
+else {y = "shaken";}
+				return y;	}
+				
+function boneGet(){
+var x = Math.floor((Math.random() * 20) + 1);
+if (x == 1){y = "Elf";}
+else if (x == 2){y = "human";}
+else if (x == 3){y = "Orc";}
+else if (x == 4){y = "snake";}
+else if (x == 5){y = "bird";}
+else if (x == 6){y = "fish";}
+else if (x == 7){y = "imitation";}
+else if (x == 8){y = "buffalo";}
+else if (x == 9){y = "Goblin";}
+else if (x == 10){y = "Dwarf";}
+else if (x == 11){y = "petrified";}
+else if (x == 12){y = "dog";}
+else if (x == 13){y = "cat";}
+else if (x == 14){y = "horse";}
+else if (x == 15){y = "dragon";}
+else {y = "animal";}
+				return y;	}
+
+function materialGet(){
+var color = colorGet(); 
+var bone = boneGet();
+var x = Math.floor((Math.random() * 15) + 1);
+var y = Math.floor((Math.random() * 30) + 1);
+var c = Math.floor((Math.random() * 10) + 1);
+if (x == 1){v = "cut from ";}
+else if (x == 2){v = "made primarily out of ";}
+else if (x == 3){v = "carved out of ";}
+else if (x == 4){v = "composed of ";}
+else if (x == 5){v = "of ";}
+else if (x == 6){v = "carved from ";}
+else if (x == 7){v = "constructed out of ";}
+else {v = "made of ";}
+
+if (y == 1){z = "stone";}
+else if (y == 2){z = "ivory";}
+else if (y == 3){z = bone + " bone";}
+else if (y == 4){z = "leather";}
+else if (y == 5){z = "glass";}
+else if (y == 6){z = "crystal";}
+else if (y == 7){z = "wood";}
+else if (y == 8){z = "pewter";}
+else if (y == 9){z = "clay";}
+else if (y == 10){z = "iron";}
+else if (y == 11){z = "silver";}
+else if (y == 12){z = "porcelain";}
+else if (y == 13){z = "gold";}
+else if (y == 14){z = "lead";}
+else if (y == 15){z = "reed";}
+else if (y == 16){z = "felt";}
+else if (y == 17){z = "metal";}
+else if (y == 18){z = "horn";}
+else if (y == 19){z = "buffalo horn";}
+else if (y == 21){z = "oak";}
+else if (y == 22){z = "balsa wood";}
+else if (y == 23){z = "cherrywood";}
+else if (y == 24){z = "soft wood";}
+else if (y == 25){z = "tarnished copper";}
+else if (y == 26){z = "steel";}
+else if (y == 27){y = "cork";}
+else {z = "copper";}
+
+if (c > 5){col = "";}
+else {col = color;}
+
+var mat = v + col + " " + z;
+return mat;	}
+
+function adjectivePhrase() {
+var x = Math.floor((Math.random() * 15) + 1);
+var y = Math.floor((Math.random() * 10) + 1);
+var z = Math.floor((Math.random() * 20) + 1);
+var w = Math.floor((Math.random() * 10) + 1);
+var size = sizeGet();
+
+if (x == 1){a1 = "dainty";}
+else if (x == 2){a1 = "miniature";}
+else if (x == 3){a1 = "giant";}
+else if (x == 4){a1 = "small";}
+else if (x == 5){a1 = "pocket-sized";}
+else if (x == 6){a1 = "tiny";}
+else if (x == 7){a1 = "compact";}
+else if (x == 8){a1 = "quite tiny";}
+else if (x == 9){a1 = "squat";}
+else if (x == 10){a1 = "small";}
+else {a1 = size + "-sized";}
+
+if (y == 1){a2 = "partially";}
+else if (y == 2){a2 = "relatively";}
+else if (y == 3){a2 = "perfectly";}
+else if (y == 4){a2 = "strikingly";}
+else if (y == 5){a2 = "oddly";}
+else if (y == 6){a2 = "unusually";}
+else if (y == 7){a2 = "just-barely";}
+else if (y == 8){a2 = "freshly";}
+else if (y == 9){a2 = "nicely";}
+else {a2 = "";}
+
+if (z == 1){a3 = "painted";}
+else if (z == 2){a3 = "gilded";}
+else if (z == 3){a3 = "chipped";}
+else if (z == 4){a3 = "colorful";}
+else if (z == 5){a3 = "speckled";}
+else if (z == 6){a3 = "translucent";}
+else if (z == 7){a3 = "burnt";}
+else if (z == 8){a3 = "cracked";}
+else if (z == 9){a3 = "chewed up";}
+else if (z == 10){a3 = "scored";}
+else if (z == 11){a3 = "worn-smooth";}
+else if (z == 12){a3 = "notched";}
+else if (z == 13){a3 = "decorated";}
+else if (z == 14){a3 = "put-together";}
+else if (z == 15){a3 = "smooth";}
+else if (z == 16){a3 = "perfect";}
+else if (z == 17){a3 = "dusty";}
+else if (z == 18){a3 = "damp";}
+else if (z == 19){a3 = "mottled";}
+else if (z == 20){a3 = "worn-out";}
+var ap2 = a2 + " " + a3;
+
+if (w > 5){ap1 = a1 + ", ";}
+else {ap1 = "";}
+
+var AP = ap1 + ap2 ;
+return AP;}
+
+function detPhrase() {
+var AP = adjectivePhrase();
+var agree = AP.substring(0, 1);
+	if (agree == "a" || agree == "o"||agree == "e"||agree == "u"||agree == "i"){det = "An";}	
+	else {det = "A";}	
+var DP = det + " " + AP;
+return DP;}
+							
+function nounPhrase() {
+var relC = relGet();
+var mark = markGet();
+var rel2 = relGet();
+var rel3 = relGet();
+var color = colorGet();
+var lang = langGet();
+var place = placeGet();
+var uhh = uhhGet();
+var m = materialGet();
+var number = numGet();
+var statue = statueGet();
+var of = ofGet();
+var adverb = adverbGet();
+var x = Math.floor((Math.random() * 100) + 1);
+var y = Math.floor((Math.random() * 35) + 1);
+var z = Math.floor((Math.random() * 10) + 1);
+var w = Math.floor((Math.random() * 5) + 1);
+
+if (w == 1){rel = relC + ". It " + rel2;}
+else if (w == 2){rel = relC + ". It " + uhh;}
+else if (w == 3){rel = relC + ". It " + rel2 + " and " + uhh;}
+else{rel = relC;}
+
+if (x == 1){noun = "flute";}
+else if (x == 2){noun = "knife";}
+else if (x == 3){noun = "dagger";}
+else if (x == 4){noun = "ring";}
+else if (x == 5){noun = "bracelet";}
+else if (x == 6){noun = "flower";}
+else if (x == 7){noun = "coin";}
+else if (x == 8){noun = "boot";}
+else if (x == 9){noun = "flask" + of;}
+else if (x == 10){noun = "bottle" + of;}
+else if (x == 11){noun = "ink pen";}
+else if (x == 12){noun = "whistle";}
+else if (x == 13){noun = "fork";}
+else if (x == 14){noun = "spoon";}
+else if (x == 15){noun = "stylus";}
+else if (x == 16){noun = "hatchet";}
+else if (x == 17){noun = "crown";}
+else if (x == 18){noun = "earring";}
+else if (x == 19){noun = "pendant";}
+else if (x == 20){noun = "figurine" + statue;}
+else if (x == 21){noun = "spike";}
+else if (x == 22){noun = "birdhouse";}
+else if (x == 23){noun = "sphere";}
+else if (x == 24){noun = "pipe";}
+else if (x == 25){noun = "holy symbol";}
+else if (x == 26){noun = "triangular prism";}
+else if (x == 27){noun = "disc";}
+else if (x == 28){noun = "brooch";}
+else if (x == 29){noun = "rod";}
+else if (x == 30){noun = "arrow";}
+else if (x == 31){noun = "chain";}
+else if (x == 32){noun = "hair clip";}
+else if (x == 33){noun = "amulet";}
+else if (x == 34){noun = "figurine " + statue;}
+else if (x == 35){noun = "mug";}
+else if (x == 36){noun = "bauble";}
+else if (x == 37){noun = "block";}
+else if (x == 38){noun = "plate";}
+else if (x == 39){noun = "sea shell";}
+else if (x == 40){noun = "vial" + of;}
+else if (x == 41){noun = "paper weight" + statue;}
+else if (x == 42){noun = "spear";}
+else if (x == 43){noun = "throwing star";}
+else if (x == 44){noun = "printing block";}
+else if (x == 44){noun = "seal";}
+else if (x == 45){noun = "trinket";}
+else if (x == 46){noun = "sheath";}
+else if (x == 47){noun = "teapot";}
+else if (x == 48){noun = "teacup";}
+else if (x == 49){noun = "four leaf clover";}
+else if (x == 50){noun = "toothpick";}
+else if (x == 51){noun = "hammer";}
+else if (x == 52){noun = "door nail";}
+else if (x == 53){noun = "bell";}
+else if (x == 54){noun = "dart";}
+else if (x == 55){noun = "candle stick";}
+else if (x == 56){noun = "carving " + statue;}
+else if (x == 57){noun = "box" + of;}
+else if (x == 58){noun = "bust " + statue;}
+else if (x == 59){noun = "pinecone";}
+else if (x == 60){noun = "spade";}
+else if (x == 61){noun = "shard";}
+else if (x == 62){noun = "glove";}
+else if (x == 63){noun = "horn";}
+else if (x == 64){noun = "die";}
+else if (x == 65){noun = "top";}
+else if (x == 66){noun = "goblet";}
+else if (x == 67){noun = "button";}
+else if (x == 68){noun = "thimble";}
+else if (x == 69){noun = "piano key";}
+else if (x == 70){noun = "nail file";}
+else if (x == 71){noun = "lock pick";}
+else if (x == 72){noun = "comb";}
+else if (x == 73){noun = "hair brush";}
+else if (x == 74){noun = "horse shoe";}
+else if (x == 75){noun = "hook";}
+else if (x == 76){noun = "arrow head";}
+else if (x == 77){noun = "fishing hook";}
+else if (x == 78){noun = "cooking pan";}
+else if (x == 79){noun = "tankard";}
+else if (x == 80){noun = "brick";}
+else if (x == 81){noun = "prophylactic";}
+else if (x == 82){noun = "wand";}
+else if (x == 83){noun = "door knob";}
+else if (x == 84){noun = "mask";}
+else if (x == 85){noun = "key";}
+else if (x == 86){noun = "key";}
+else if (x == 87){noun = "key";}
+else {noun = "statue" + statue;}
+
+if (y == 1){PP = " from Port Signorr";}
+else if (y == 2){PP = " in a bottle";}
+else if (y == 3){PP = " in a pouch";}
+else if (y == 4){PP = " wrapped in " + color + " cloth";}
+else if (y == 5){PP = " with a few cracks";}
+else if (y == 6){PP = " covered in " + lang + " writing"}
+else if (y == 7){PP = " in a " + color + " sleeve";}
+else if (y == 8){PP = " etched with " + lang + " symbols";}
+else if (y == 9){PP = " without any markings";}
+else if (y == 10){PP = " tied in " + color + " string";}
+else if (y == 11){PP = " with a single " + lang + " letter stamped on it";}
+else if (y == 12){PP = " dipped in ink";}
+else if (y == 13){PP = " with " + number + " " + mark;}
+else if (y == 14){PP = " with " + number + " " + color + " polka dots";}
+else if (y == 15){PP = " in a bottle that " + rel3;}
+else if (y == 16){PP = " with " + mark;}
+else if (y == 17){PP = " with " + mark;}
+else {PP = "";}
+
+
+var phrase = noun + PP + ". It is " + m + " and " + rel;
+return phrase;}
+							
+function outPut(){
+var NP = nounPhrase();
+var DP = detPhrase();
+var trinket =  DP + " " + NP + ".";
+document.getElementById("demo").innerHTML = trinket;
+}	
+
+</script>
+</head>
+
+<body>
+<div style="margin-left:auto;margin-right=auto;width=80%;">
+<h1 style="text-align: center">Ylen's Trinket Generator!</h1>
+<div style="text-align: center">
+<button type="button" onclick="outPut()">New Trinket!</button>
+<br/>
+<p id="demo"></p>
+</div>
+</div>
+
+
+</body>
+    
+</html>
