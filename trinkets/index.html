@@ -489,7 +489,7 @@ function materialGet(){
 var color = colorGet(); 
 var bone = boneGet();
 var x = Math.floor((Math.random() * 15) + 1);
-var y = Math.floor((Math.random() * 45) + 1);
+var y = Math.floor((Math.random() * 40) + 1);
 var c = Math.floor((Math.random() * 14) + 1);
 if (x == 1){v = "cut from ";}
 else if (x == 2){v = "made primarily out of ";}
@@ -544,7 +544,7 @@ return mat;	}
 
 function adjectivePhrase() {
 var x = Math.floor((Math.random() * 15) + 1);
-var y = Math.floor((Math.random() * 10) + 1);
+var y = Math.floor((Math.random() * 15) + 1);
 var z = Math.floor((Math.random() * 30) + 1);
 var w = Math.floor((Math.random() * 10) + 1);
 var size = sizeGet();
@@ -570,6 +570,9 @@ else if (y == 6){a2 = "unusually";}
 else if (y == 7){a2 = "just-barely";}
 else if (y == 8){a2 = "freshly";}
 else if (y == 9){a2 = "nicely";}
+else if (y == 10){a2 = "beautifully";}
+else if (y == 11){a2 = "plainly";}
+else if (y == 12){a2 = "completely";}
 else {a2 = "";}
 
 if (z == 1){a3 = "painted";}
