@@ -334,7 +334,9 @@ var look = "looks " + y;
 return look;	}
 
 function uhhGet(){
-var x = Math.floor((Math.random() * 20) + 1);
+	var number = numberGet();
+	var number2 = number + 75;
+var x = Math.floor((Math.random() * 30) + 1);
 if (x == 1){y = "might make for a good gift";}
 else if (x == 2){y = "is probably worthless";}
 else if (x == 3){y = "seems relatively harmless";}
@@ -347,7 +349,7 @@ else if (x == 9){y = "fits in your hand pretty well";}
 else if (x == 10){y = "wouldn't make a good hat";}
 else if (x == 11){y = "has probably been through a lot";}
 else if (x == 12){y = "was probably stolen";}
-else if (x == 13){y = "is obviously magnetic";}
+else if (x == 13){y = "is seemingly magnetic";}
 else if (x == 14){y = "won't be missed";}
 else if (x == 15){y = "would bother you if you didn't hold on to it";}
 else if (x == 16){y = "is obviously unimportant";}
@@ -355,6 +357,16 @@ else if (x == 17){y = "has few, if any, potential uses";}
 else if (x == 18){y = "will break your heart if you let it";}
 else if (x == 19){y = "could hurt someone";}
 else if (x == 20){y = "was well cared-for in a previous life";}
+else if (x == 21){y = "is fun to play with";}
+else if (x == 22){y = "seems sturdy";}
+else if (x == 23){y = "bounces well";}
+else if (x == 24){y = "would make a great new pet";}
+else if (x == 25){y = "is stamped" + " " + number + "/" + number2;}
+else if (x == 26){y = "looks pretty";}
+else if (x == 27){y = "might be haunted";}
+else if (x == 28){y = "is very dull";}
+else if (x == 29){y = "is, honestly, kind of ugly";}
+else if (x == 30){y = "looks incredibly common";}
 var uhh = y;
 return uhh;	}
 
@@ -599,7 +611,7 @@ var adverb = adverbGet();
 var x = Math.floor((Math.random() * 100) + 1);
 var y = Math.floor((Math.random() * 35) + 1);
 var z = Math.floor((Math.random() * 10) + 1);
-var w = Math.floor((Math.random() * 8) + 1);
+var w = Math.floor((Math.random() * 10) + 1);
 
 if (w == 1){rel = relC + ". It " + rel2;}
 else if (w == 2){rel = relC + ". It " + uhh;}
@@ -680,7 +692,7 @@ else if (x == 70){noun = "nail file";}
 else if (x == 71){noun = "lock pick";}
 else if (x == 72){noun = "comb";}
 else if (x == 73){noun = "hair brush";}
-else if (x == 74){noun = "horse shoe";}
+else if (x == 74){noun = "horseshoe";}
 else if (x == 75){noun = "hook";}
 else if (x == 76){noun = "arrow head";}
 else if (x == 77){noun = "fishing hook";}
