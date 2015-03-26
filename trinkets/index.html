@@ -14,8 +14,9 @@ var gerund = gerundGet();
 var verben = verbenGet();
 var adverb = adverbGet();
 var place = placeGet();
+var obv = obvGet();
 var uhh = uhhGet();
-var z = Math.floor((Math.random() * 26) + 1);
+var z = Math.floor((Math.random() * 32) + 1);
 if (z == 1){rel = "reminds you of " + place;}
 else if (z == 2){rel = "is surprisingly heavy";}
 else if (z == 3){rel = gerund + " if " + verben;}
@@ -42,6 +43,12 @@ else if (z == 23){rel = look + " when " + verben;}
 else if (z == 24){rel = "stirs a distant emotion in you";}
 else if (z == 25){rel = "stirs a distant emotion in you when " + verben;}
 else if (z == 26){rel = feeling + " when " + verben;}
+else if (z == 27){rel = "stirs a distant memory in you when " + verben;}
+else if (z == 28){rel = "reminds you of something...but you're unsure what";}
+else if (z == 29){rel = "is a total keeper";}
+else if (z == 30){rel = "seems unlucky";}
+else if (z == 31){rel = "looks like modern art";}
+else if (z == 32){rel = "is " + obv + " harmless";}
 return rel;
 }
 
@@ -291,7 +298,7 @@ var smell = "smells " + y;
 return smell;	}
 
 function feelGet(){
-var x = Math.floor((Math.random() * 22) + 1);
+var x = Math.floor((Math.random() * 24) + 1);
 if (x == 1){y = "heavier than it looks";}
 else if (x == 2){y = "very soft";}
 else if (x == 3){y = "rough to the touch";}
@@ -310,6 +317,8 @@ else if (x == 15){y = "sturdy";}
 else if (x == 16){y = "surprisingly sticky";}
 else if (x == 17){y = "warm to the touch";}
 else if (x == 18){y = "cool to the touch";}
+else if (x == 19){y = "bumpy";}
+else if (x == 20){y = "gritty";}
 else {y = "hollow";}
 var feel = "feels " + y;
 return feel;	}
@@ -459,7 +468,7 @@ else if (x == 18){y = "a castle";}
 				return y;	}
 				
 function gerundGet(){
-var x = Math.floor((Math.random() * 25) + 1);
+var x = Math.floor((Math.random() * 35) + 1);
 if (x == 1){y = "hums";}
 else if (x == 2){y = "glows";}
 else if (x == 3){y = "rings";}
@@ -480,12 +489,20 @@ else if (x == 17){y = "shines";}
 else if (x == 18){y = "wobbles";}
 else if (x == 19){y = "splinters";}
 else if (x == 20){y = "shivers";}
+else if (x == 21){y = "buzzes";}
+else if (x == 22){y = "falls over";}
+else if (x == 23){y = "shimmers";}
+else if (x == 24){y = "sweats";}
+else if (x == 25){y = "drips";}
+else if (x == 26){y = "sheds little flakes";}
+else if (x == 27){y = "warms up";}
+else if (x == 28){y = "emits a fine mist";}
 else {y = "rattles";}
 				return y;	}
 				
 								
 function verbenGet(){
-var x = Math.floor((Math.random() * 25) + 1);
+var x = Math.floor((Math.random() * 35) + 1);
 if (x == 1){y = "held";}
 else if (x == 2){y = "struck";}
 else if (x == 3){y = "spun";}
@@ -507,6 +524,14 @@ else if (x == 18){y = "you want it to";}
 else if (x == 19){y = "dropped";}
 else if (x == 20){y = "wet";}
 else if (x == 21){y = "held aloft";}
+else if (x == 22){y = "tilted to the side";}
+else if (x == 23){y = "flipped upside down";}
+else if (x == 24){y = "stroked";}
+else if (x == 25){y = "sang to";}
+else if (x == 26){y = "grasped";}
+else if (x == 27){y = "ignored";}
+else if (x == 28){y = "brandished menacingly";}
+else if (x == 29){y = it touches metal;}
 else {y = "shaken";}
 				return y;	}
 				
@@ -603,6 +628,7 @@ else if (x == 6){a1 = "tiny";}
 else if (x == 7){a1 = "compact";}
 else if (x == 8){a1 = "quite tiny";}
 else if (x == 9){a1 = "squat";}
+else if (x == 10){a1 = "small";}
 else if (x == 10){a1 = "small";}
 else {a1 = size + "-sized";}
 
