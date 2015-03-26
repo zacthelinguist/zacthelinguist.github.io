@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -87,6 +88,7 @@ else {y = y;}
 return y;	}
 
 function ofGet(){
+var color = colorGet();
 var bone = boneGet();
 var x = Math.floor((Math.random() * 20) + 1);
 if (x == 1){y = " of " + bone + " teeth";}
@@ -101,8 +103,8 @@ else if (x == 9){y = " of tea";}
 else if (x == 10){y = " of broken glass";}
 else if (x == 11){y = " of perfume";}
 else if (x == 12){y = " of hair";}
-else if (x == 13){y = " of ink";}
-else if (x == 14){y = " of " + bone + " and " + bone + " blood";}
+else if (x == 13){y = " of " + color + " ink";}
+else if (x == 14){y = " of " + bone + " and " + bone + " blood mixed together";}
 else if (x == 15){y = " of pebbles";}
 else {y = "";}
 				return y;	}
@@ -802,17 +804,43 @@ var trinket =  DP + " " + NP + ".";
 document.getElementById("demo").innerHTML = trinket;
 }	
 
+function trinket(){
+var NP = nounPhrase();
+var DP = detPhrase();
+var trinket =  DP + " " + NP + ".";
+return trinket;
+}
+
+
+function listTrinkets(x){
+var text = "";
+    var i;
+    for (i = 0; i < x; i++) {
+    var y = trinket();
+        text += y +  "<br><br>";}
+document.getElementById("list").innerHTML = text;
+}
+
 </script>
 </head>
 
-<body>
+<body onload = "outPut();">
 <div style="margin-left:auto;margin-right:auto;width:80%;">
 <h1 style="text-align: center; font-size:200%;">Ylen's Trinket Generator!</h1>
-<div style="text-align: center; font-size:180%;">
-<button style="text-align: center; font-size:100%;" type="button" onclick="outPut()">New Trinket</button>
-<br/>
+<hr>
+<div style="text-align: center; font-size:180%; height:7em;">
+<p>You come across...</p>
 <p id="demo" style="margin-left:auto;margin-right:auto;"></p>
+<br/>
 </div>
+<div style="text-align: center; font-size:180%;">
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="outPut()">New Trinket</button><br>
+<hr>
+
+<br/>
+<pstyle="margin-left:auto;margin-right:auto;">Generate several trinkets:</p>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(5)">5</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(10)">10</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(25)">25</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(50)">50</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(100)">100</button>
+<p id="list" style="margin-left:auto;margin-right:auto;"></p>
 </div>
 
 
