@@ -90,21 +90,22 @@ return y;	}
 function ofGet(){
 var color = colorGet();
 var bone = boneGet();
+var bone2 = boneGet();
 var x = Math.floor((Math.random() * 20) + 1);
 if (x == 1){y = " of " + bone + " teeth";}
 else if (x == 2){y = " of whiskey";}
 else if (x == 3){y = " of ale";}
 else if (x == 4){y = " of " + bone + " blood";}
-else if (x == 5){y = " of sand";}
-else if (x == 6){y = " of smoke";}
+else if (x == 5){y = " of " + color + " sand";}
+else if (x == 6){y = " of " + color + " smoke";}
 else if (x == 7){y = " of oil";}
 else if (x == 8){y = " of water";}
 else if (x == 9){y = " of tea";}
 else if (x == 10){y = " of broken glass";}
 else if (x == 11){y = " of perfume";}
-else if (x == 12){y = " of hair";}
+else if (x == 12){y = " of " + color + " hair";}
 else if (x == 13){y = " of " + color + " ink";}
-else if (x == 14){y = " of " + bone + " and " + bone + " blood mixed together";}
+else if (x == 14){y = " of " + bone + " and " + bone2 + " blood mixed together";}
 else if (x == 15){y = " of pebbles";}
 else {y = "";}
 				return y;	}
@@ -176,7 +177,7 @@ else if (x == 4){y = "acorn";}
 else if (x == 5){y = "medium";}
 else if (x == 6){y = "onion";}
 else if (x == 7){y = "pebble";}
-else if (x == 8){y = "palm";}
+else if (x == 8){y = "lemon";}
 else if (x == 9){y = "smaller";}
 else if (x == 10){y = "larger";}
 else if (x == 11){y = "walnut";}
@@ -190,7 +191,7 @@ else if (x == 18){y = "half";}
 				return y;	}
 	
 function adverbGet(){
-var x = Math.floor((Math.random() * 22) + 1);
+var x = Math.floor((Math.random() * 30) + 1);
 if (x == 1){y = " faintly";}
 else if (x == 2){y = " sporadically";}
 else if (x == 3){y = "  just a little bit";}
@@ -218,7 +219,7 @@ else {y = "";}
 				
 function statueGet(){
 var kind = kindGet();
-var x = Math.floor((Math.random() * 40) + 1);
+var x = Math.floor((Math.random() * 45) + 1);
 if (x == 1){y = " of a frog";}
 else if (x == 2){y = " of a human " + kind;}
 else if (x == 3){y = " of a Dwarven " + kind;}
@@ -259,6 +260,11 @@ else if (x == 37){y = " of an ant";}
 else if (x == 38){y = " of crashing waves";}
 else if (x == 39){y = " of a skull";}
 else if (x == 40){y = " of goblins";}
+else if (x == 41){y = " of a squirrel";}
+else if (x == 42){y = " of a wolf";}
+else if (x == 43){y = " of a portly " + kind;}
+else if (x == 44){y = " of a roc";}
+else if (x == 45){y = " of a griffon";}
 				return y;	}
 				
 function smellGet(){
@@ -372,7 +378,7 @@ return y;}
 function uhhGet(){
 var adv = obvGet();
 	var number = numGet();
-var x = Math.floor((Math.random() * 31) + 1);
+var x = Math.floor((Math.random() * 35) + 1);
 if (x == 1){y = "might make for a good gift";}
 else if (x == 2){y = "is " + adv + "worthless";}
 else if (x == 3){y = "seems relatively harmless";}
@@ -404,11 +410,15 @@ else if (x == 28){y = "is very dull";}
 else if (x == 29){y = "is, honestly, kind of ugly";}
 else if (x == 30){y = "looks incredibly common";}
 else if (x == 31){y = "doesn't hold your attention long";}
+else if (x == 32){y = "seems to like you";}
+else if (x == 33){y = "might be lucky";}
+else if (x == 34){y = "is easily forgetable";}
+else if (x == 35){y = "might impress your friends back home";}
 var uhh = y;
 return uhh;	}
 
 function langGet(){
-var x = Math.floor((Math.random() * 10) + 1);
+var x = Math.floor((Math.random() * 15) + 1);
 if (x == 1){y = "Common";}
 else if (x == 2){y = "Elven";}
 else if (x == 3){y = "Orcish";}
@@ -419,6 +429,11 @@ else if (x == 7){y = "wizardly";}
 else if (x == 8){y = "Goblin";}
 else if (x == 9){y = "Supernal";}
 else if (x == 10){y = "Abyssal";}
+else if (x == 11){y = "foreign";}
+else if (x == 12){y = "Primordial";}
+else if (x == 13){y = "Spanish";}
+else if (x == 14){y = "Port Signorrian";}
+else if (x == 15){y = "arcane";}
 				return y;	}
 				
 function placeGet(){
@@ -552,7 +567,7 @@ else if (y == 19){z = "buffalo horn";}
 else if (y == 21){z = "oak";}
 else if (y == 22){z = "balsa wood";}
 else if (y == 23){z = "cherrywood";}
-else if (y == 24){z = "soft wood";}
+else if (y == 24){z = "stained glass";}
 else if (y == 25){z = "tarnished copper";}
 else if (y == 26){z = "steel";}
 else if (y == 27){z = "cork";}
@@ -563,7 +578,7 @@ else if (y == 31){z = "rubber";}
 else if (y == 32){z = "zinc";}
 else if (y == 33){z = "bamboo";}
 else if (y == 34){z = bone + " bone";}
-else if (y == 35){z = bone + " bone";}
+else if (y == 35){z = bone + " tooth";}
 else {z = "metal";}
 
 if (c > 5){col = "";}
@@ -573,9 +588,9 @@ var mat = v + col + " " + z;
 return mat;	}
 
 function adjectivePhrase() {
-var x = Math.floor((Math.random() * 15) + 1);
+var x = Math.floor((Math.random() * 13) + 1);
 var y = Math.floor((Math.random() * 15) + 1);
-var z = Math.floor((Math.random() * 30) + 1);
+var z = Math.floor((Math.random() * 35) + 1);
 var w = Math.floor((Math.random() * 10) + 1);
 var size = sizeGet();
 
@@ -635,6 +650,11 @@ else if (z == 27){a3 = "creased";}
 else if (z == 28){a3 = "greased-up";}
 else if (z == 29){a3 = "customized";}
 else if (z == 30){a3 = "lubricated";}
+else if (z == 31){a3 = "sanded";}
+else if (z == 32){a3 = "scrubbed";}
+else if (z == 33){a3 = "tarnished";}
+else if (z == 34){a3 = "scraped-up";}
+else if (z == 35){a3 = "tainted";}
 var ap2 = a2 + a3;
 
 if (w > 5){ap1 = a1 + ", ";}
@@ -665,7 +685,7 @@ var number = numGet();
 var statue = statueGet();
 var of = ofGet();
 var adverb = adverbGet();
-var x = Math.floor((Math.random() * 125) + 1);
+var x = Math.floor((Math.random() * 130) + 1);
 var y = Math.floor((Math.random() * 35) + 1);
 var z = Math.floor((Math.random() * 10) + 1);
 var w = Math.floor((Math.random() * 15) + 1);
@@ -772,6 +792,10 @@ else if (x == 92){noun = "wheel";}
 else if (x == 93){noun = "cog";}
 else if (x == 94){noun = "buckle";}
 else if (x == 95){noun = "key";}
+else if (x == 96){noun = "knitting needle";}
+else if (x == 97){noun = "knife";}
+else if (x == 98){noun = "whip";}
+else if (x == 99){noun = "skeleton key";}
 else {noun = "statue" + statue;}
 
 if (y == 1){PP = " from Port Signorr";}
@@ -791,6 +815,7 @@ else if (y == 14){PP = " with " + number + " " + color + " polka dots";}
 else if (y == 15){PP = " in a bottle that " + rel3;}
 else if (y == 16){PP = " with " + mark;}
 else if (y == 17){PP = " with " + mark;}
+else if (y == 11){PP = " with a " + lang + " poem written on it";}
 else {PP = "";}
 
 
