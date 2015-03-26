@@ -46,7 +46,7 @@ return rel;
 
 function colorGet(){
 var x = Math.floor((Math.random() * 31) + 1);
-var z = Math.floor((Math.random() * 10) + 1);
+var z = Math.floor((Math.random() * 9) + 1);
 if (x == 1){y = "black";}
 else if (x == 2){y = "white";}
 else if (x == 3){y = "blue";}
@@ -79,7 +79,10 @@ else if (x == 29){y = "mottled";}
 else if (x == 30){y = "violet";}
 else if (x == 31){y = "translucent";}
 
-if (z > 6 && (x!=31&& x!=28&& x!=19&& x!=20&& x!=14&& x!=13&& x!=29&& x!=26&& x!=22&&x!=25&&x!=21) ){y = y + "-painted";}
+if (z == 1 && (x!=31&& x!=28&& x!=19&& x!=20&& x!=14&& x!=13&& x!=29&& x!=26&& x!=22&&x!=25&&x!=21) ){y = y + "-painted";}
+if (z == 2 && (x!=31&& x!=28&& x!=19&& x!=20&& x!=14&& x!=13&& x!=29&& x!=26&& x!=22&&x!=25&&x!=21) ){y = y + "-hued";}
+if (z == 3 && (x!=31&& x!=28&& x!=19&& x!=20&& x!=14&& x!=13&& x!=29&& x!=26&& x!=22&&x!=25&&x!=21) ){y = y + "-tinted";}
+if (z == 4 && (x!=31&& x!=28&& x!=19&& x!=20&& x!=14&& x!=13&& x!=29&& x!=26&& x!=22&&x!=25&&x!=21) ){y = y + "-stained";}
 else {y = y;}
 return y;	}
 
@@ -163,7 +166,7 @@ else if (x == 10){y = "man with exposed genitals";}
 				return y;	}
 				
 function sizeGet(){
-var x = Math.floor((Math.random() * 15) + 1);
+var x = Math.floor((Math.random() * 18) + 1);
 if (x == 1){y = "apple";}
 else if (x == 2){y = "fist";}
 else if (x == 3){y = "palm";}
@@ -179,6 +182,9 @@ else if (x == 12){y = "thumb";}
 else if (x == 13){y = "pinky";}
 else if (x == 14){y = "weirdly";}
 else if (x == 15){y = "full";}
+else if (x == 16){y = "rat";}
+else if (x == 17){y = "fly";}
+else if (x == 18){y = "half";}
 				return y;	}
 	
 function adverbGet(){
@@ -210,7 +216,7 @@ else {y = "";}
 				
 function statueGet(){
 var kind = kindGet();
-var x = Math.floor((Math.random() * 30) + 1);
+var x = Math.floor((Math.random() * 40) + 1);
 if (x == 1){y = " of a frog";}
 else if (x == 2){y = " of a human " + kind;}
 else if (x == 3){y = " of a Dwarven " + kind;}
@@ -233,7 +239,7 @@ else if (x == 19){y = " of a fish";}
 else if (x == 20){y = " of a mouse";}
 else if (x == 21){y = " of an indecent act";}
 else if (x == 22){y = " of a grapefruit";}
-else if (x == 23){y = " of barrel";}
+else if (x == 23){y = " of a barrel";}
 else if (x == 24){y = " of a toad";}
 else if (x == 25){y = " of a turtle";}
 else if (x == 26){y = " of a leaf";}
@@ -241,6 +247,16 @@ else if (x == 27){y = " of a pumpkin";}
 else if (x == 28){y = " of the moon";}
 else if (x == 29){y = " of the sun";}
 else if (x == 30){y = " of a very familiar face";}
+else if (x == 31){y = " of two kissing birds";}
+else if (x == 32){y = " of a chair";}
+else if (x == 33){y = " of an eagle";}
+else if (x == 34){y = " of some gnolls";}
+else if (x == 35){y = " of a boot";}
+else if (x == 36){y = " of a monkey";}
+else if (x == 37){y = " of an ant";}
+else if (x == 38){y = " of crashing waves";}
+else if (x == 39){y = " of a skull";}
+else if (x == 40){y = " of goblins";}
 				return y;	}
 				
 function smellGet(){
@@ -340,25 +356,37 @@ else if (x == 20){y = "uneven";}
 var look = "looks " + y;
 return look;	}
 
+function obvGet(){
+var x = Math.floor((Math.random() * 12) + 1);
+if (x == 1){y = "obviously ";}
+else if (x == 2){y = "assuredly ";}
+else if (x == 3){y = "apparently ";}
+else if (x == 4){y = "definitely ";}
+else if (x == 5){y = "most likely ";}
+else if (x == 6){y = "seemingly ";}
+else{y = "probably ";}
+return y;}
+
 function uhhGet(){
+var adv = obvGet();
 	var number = numGet();
 var x = Math.floor((Math.random() * 31) + 1);
 if (x == 1){y = "might make for a good gift";}
-else if (x == 2){y = "is probably worthless";}
+else if (x == 2){y = "is " + adv + "worthless";}
 else if (x == 3){y = "seems relatively harmless";}
-else if (x == 4){y = "probably isn't edible";}
+else if (x == 4){y =  adv + "isn't edible";}
 else if (x == 5){y = "might be useful";}
 else if (x == 6){y = "will bother you if you don't take it with you";}
 else if (x == 7){y = "doesn't seem to belong here";}
 else if (x == 8){y = "would look nice on a shelf";}
 else if (x == 9){y = "fits in your hand pretty well";}
 else if (x == 10){y = "wouldn't make a good hat";}
-else if (x == 11){y = "has probably been through a lot";}
-else if (x == 12){y = "was probably stolen";}
-else if (x == 13){y = "is seemingly magnetic";}
-else if (x == 14){y = "won't be missed";}
+else if (x == 11){y = "has " + adv + "been through a lot";}
+else if (x == 12){y = "was " + adv + "stolen";}
+else if (x == 13){y = "is " + adv + "magnetic";}
+else if (x == 14){y =  adv + "won't be missed";}
 else if (x == 15){y = "would bother you if you didn't hold on to it";}
-else if (x == 16){y = "is obviously unimportant";}
+else if (x == 16){y = "is " + adv + "unimportant";}
 else if (x == 17){y = "has few, if any, potential uses";}
 else if (x == 18){y = "will break your heart if you let it";}
 else if (x == 19){y = "could hurt someone";}
