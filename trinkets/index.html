@@ -610,7 +610,7 @@ else if (z == 2){a3 = "gilded";}
 else if (z == 3){a3 = "chipped";}
 else if (z == 4){a3 = "colorful";}
 else if (z == 5){a3 = "speckled";}
-else if (z == 6){a3 = "unearthed";}
+else if (z == 6){a3 = "studded";}
 else if (z == 7){a3 = "burnt";}
 else if (z == 8){a3 = "cracked";}
 else if (z == 9){a3 = "chewed up";}
@@ -825,20 +825,21 @@ document.getElementById("list").innerHTML = text;
 </head>
 
 <body onload = "outPut();">
-<div style="margin-left:auto;margin-right:auto;width:80%;">
-<h1 style="text-align: center; font-size:200%;">Ylen's Trinket Generator!</h1>
+<div style="margin-left:auto;margin-right:auto;width:60%;">
+<h1 style="text-align: center; font-size:200%;">Ylen's D&D Trinket Generator!</h1>
 <hr>
 <div style="text-align: center; font-size:180%; height:10%;">
 <p>You come across...</p>
-<p id="demo" style="margin-left:auto;margin-right:auto;"></p>
-<br/>
+<div style="text-align: center; font-size:130%; height:5em;overflow: scroll;padding:.5em;">
+<p id="demo" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></p>
 </div>
-<div style="text-align: center; font-size:180%;">
+<br>
 <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="outPut()">New Trinket</button><br>
+</div>
+<div style="text-align: center; font-size:120%;">
 <hr>
 
-<br/>
-<pstyle="margin-left:auto;margin-right:auto;">Generate several trinkets:</p>
+<p style="margin-left:auto;margin-right:auto;">Generate several trinkets:</p>
 <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(5)">5</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(10)">10</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(25)">25</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(50)">50</button> <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="listTrinkets(100)">100</button>
 <p id="list" style="margin-left:auto;margin-right:auto;"></p>
 </div>
