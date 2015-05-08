@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Trinkets</title>
+<script>
+function dice(x){
+return Math.floor((Math.random() * x) + 1);}
+
+var colors = ["red", "orange", "yellow", "green", 
+"blue", "purple", "lavendar", "violet", "black", "white", "grey", "brown", "pink", "burgandy", "teal", "olive",
+"charcoal", "off-white", "amber", "cyan", "crimson"];
+
+var colorMod = ["dark", "light", "bright", "mottled", "speckled", "faded"];
+
+
+function colorMake(){
+var x = dice(6);
+var y = dice(20);
+var c = x + " " + y + " " + z;
+return c;
+}
+
+function outPut(){
+var color = colorMake;
+
+var hat = "it is " = color;
+document.getElementById("demo").innerHTML = color;
+
+}
+</script>
+</head>
+
+<body onload = "outPut();">
+<div style="margin-left:auto;margin-right:auto;width:60%;">
+<h1 style="text-align: center; font-size:200%;">Ylen's D&D Hat Generator!</h1>
+<hr>
+<div style="text-align: center; font-size:180%; height:10%;">
+<p>You come across...</p>
+<div style="text-align: center; font-size:130%; height:5em;overflow: scroll;padding:.5em;">
+<p id="demo" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></p>
+</div>
+<br>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="outPut()">New Trinket</button><br>
+</div>
+<div style="text-align: center; font-size:120%;">
+<hr>
+
+
+</body>
+    
+</html>
