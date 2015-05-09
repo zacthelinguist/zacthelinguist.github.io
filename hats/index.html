@@ -7,21 +7,26 @@
 <script>
 
 function dice(x){
-return Math.floor((Math.random() * x) + 1);}
+return Math.floor((Math.random() * x));}
 
 var colors = ["red", "orange", "yellow", "green", 
 "blue", "purple", "lavendar", "violet", "black", "white", "grey", "brown", "pink", "burgandy", "teal", "olive",
 "charcoal", "off-white", "amber", "cyan", "crimson"];
 
 var colorMod = ["dark", "light", "bright", "mottled", "speckled", "faded"];
-
+var patterns = ["stripes", "polka dots", "tassles", "pompoms", "patches", "pinstripes"];
 
 function colorMake(){
 var x = colorMod[dice(6)];
 var y = colors[dice(20)];
-var c = x + " " + y;
+var z = colors[dice(20)];
+var b = colors[dice(20)];
+var a = patterns[dice(6)];
+
+var c = x + " " + y + " with " + z + " and " + b + " " + a;
 return c;
 }
+
 
 function outPut(){
 var color = colorMake();
