@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>DnD Loot Generator</title>
+<script>
+
+var common = [
+			 "brass key", "iron key", "ink pen", "prophylactic onion bulb", "ball of lint",
+			 "book of stamps", "ivory hair comb", "seashell", "flask of whiskey", "flask of brandy",
+			 "empty flask", "flask of gin", "flask of wine", "clay pipe", "wooden pipe",
+			 "chewed-up piece of mintbark", "pouch of tobacco", "pouch of duskweed", "brass rape whistle", "signet ring",
+			 "red crystal", "blue crystal", "brass toothpick", "pouch of colored sand", "miniature iron horseshoe",
+			 "cheater's die (only rolls 3 or 4)", "cheater's die (only rolls 1)","bent tarot card", "weighted die (only rolls 6)", "pocket knife",
+			 "tin fork", "wooden spoon", "dirty pocket mirror", "1 day's rations", "clean handkerchief",
+			 "slightly used handkerchief", "gross fuckin' handkerchief", "glass cat's eye marble", "wooden top", "pouch of marbles (10)",
+			 "pouch of dice (6d6)", "wooden fork", "tin whistle", "wooden handflute", " dried psychedelic mushroom",
+			 "brass belt buckle", "signet ring", "traveler's visa", "gold necklace chain (5gp)", "stone arrowhead",
+			 "silver arrowhead", "etched crossbow bolt", "wooden puzzlebox", "ivory chess piece", "ball of twine",
+			 "brass ring (2sp)", "drawing of a naked woman", "drawing of a naked man", "bent playing card", "empty pouch",
+			 "pouch of dried honeyfruit", "artisan guild papers", "bar of soap", "whittle stick", "small folding knife",
+			 "rubber ball", "wooden holy symbol", "iron holy symbol", "brass holy symbol", "golden holy symbol (5gp)",
+			 "silver holy symbol (5sp)", "small opal (2sp)", "diamond ring (30gp)", "brass compass", "pearl earring (1gp)",
+			 "bent postcard from up north", "wine cork", "pouch of chewing hops", "vial of holy water", "brass wine stopper",
+			 "gilded 4-leaf clover", "fancy cloth napkin", "empty vial", "piece of chocolate", "wax candle", 
+			 "flint and steel", "vial of magnetic shavings in water", "bit of salted cooking lard", "magnetic stone", "piece of hard candy",
+			 "dried up honeycomb", "folded paper w/ a poem", "coaster from the Damp Boulder", "shard of seaglass", "silver earring (2sp)",
+			 "book of 10 matches (20gp)", "lute pick", "a single glove", "knit cap", "vial of cooking oil", 
+			 "vial of whore's perfume", "tin of spices", "chunk of rock salt", "pouch of dried peppercorns", "sprig of wintersage"];
+
+var commonGold = ["1 silver", "2 silver", "3 silver", "4 silver", "5 silver",
+			  "6 silver", "silver pinky ring (2 silver)", "2 gold pieces", "1 copper", "a pouch of 12 copper",
+			  "1 silver", "2 silver", "3 silver", "4 silver", "5 silver",
+			  "a pouch of 5 silver", "a silver bar (5 sp)", "1 gold piece", "a pouch of 3 gold teeth (6gp)", "a pouch of 8 copper"];
+
+
+var banditWeap = ["iron dagger", "steel dagger", "steel boning knife",
+                  "bag of caltrops", "bag of ball bearings", "2 smokesticks", "set of lockpicking tools", "forged documents", "3 steel throwing stars", "iron handaxe", "5 darts", "forger's kit", "disguise kit", "medicine kit", "vial of poison", "flask of oil", "flask of acid", "brass knuckles", "stilletto dagger", "chain whip", "crossbow + 10 bolts", "bag of 5 signet rings (stolen)", "skeleton key", "iron club", "net", "crowbar", "grappling hook", "iron dagger", "steel dagger", "javelin", "iron hammer", "steel dagger", "steel club", "brass knuckles", "decorative brass dagger", "manacles", "monarchic stamp", "climber's kit", "steel mirror", "forged documents", "5 steel throwing stars", "copper handaxe", "10 darts", "iron throwing hammer",
+ "set of cheater's dice (snake-eyes)",  "set of cheater's dice (all sixes)",  "set of cheater's dice (all sevens)",  "set of cheater's dice (weighted)", "trick playing cards", "jeweler's tools", "steel stilletto dagger", "iron crowbar", "sword-in-a-staff", "pocket sand!",
+                  "iron dagger", "steel dagger", "steel butcher's knife",
+                  "bag of caltrops", "bag of ball bearings", "2 smokesticks","steel trip wire","set of brass throwing daggers","rusty dagger","rusty handaxe"
+			 ];
+
+var banditGold = [
+			  "pouch of 25 silver", "golden pinky ring (2gp)", "2 gold pieces", "pouch of 10 gold", "a pouch of 12 gold pieces",
+			  "a golden idol (10gp)", "2 white-gold earrings (1gp each)", "3 silver baubles (1gp each)", "2 decorative silver daggers (10gp each)", "1 platinum coin",
+			  "a pouch of 8 gold pieces", "2 silver bars (5sp each)", "1 gold piece", "a pouch of silver studs (5gp)", "a set of golden cufflinks (3gp each)",
+"golden brooch (5gp)","1 gold bar (5gp)","bottle of expensive wine","pouch of gemstones (5gp)","pouch of gemstones (10gp)"];
+
+    var merchantTrinket = [
+			  "bottle of fine cognac", "bottle of fine whiskey","flask of goldschnappes","invitation to an upcoming gala","hunk of foreign aged cheese","pouch of elven tobacco","ornate brass key","silk scarf","golden holy symbol","platinum holy symbol","perfumed candle","book of 10 matches","gilded dice set","pack of gilded playing cards","golden whistle","vial of scented bath oil","vial of sugarfruit perfume","magnifying glass","monocle on silver chain","platinum signet ring","vial of astralwood perfume","vial of pinkchili rocksalt","vial of crushed orange peppercorns","gilded slotted spoon","silver holy symbol on a gold chain","flask of elven basketfruit oil","pouch of teaweed","gilded salad fork","box of fine chocolates","bottle of flavored gin"];
+
+    var merchantGold = [
+			  "pouch of 25 gp", "platinum pinky ring (12gp)", "12 gold pieces", "pouch of 18 gold pieces", "a pouch of 3 platinum pieces",
+			  "a golden idol (10gp)", "2 gold earrings (5gp each)", "3 golden baubles (5gp each)", "2 decorative golden daggers (15gp each)", "1 platinum coin",
+			  "a pouch of 3 platinum pieces", "crystal vial of gold dust (15gp)", "4 gold pieces", "a pouch of foreign gold coins  (15gp)", "a set of intricate golden cufflinks (10gp each)",
+"golden brooch (5gp)","1 gold bar (5gp)","diamond ring (40gp)","pouch of gemstones (20gp)","pouch of gemstones (30gp)"];
+
+    
+function peasantPocket(){
+var x = Math.floor((Math.random() * 10));
+if (x<6){
+var a = Math.floor((Math.random() * 105));
+var out = common[a];}
+else {
+var a = Math.floor((Math.random() * 20));
+var out = commonGold[a];}
+document.getElementById("commonerOutput").innerHTML = out;
+}
+
+function peasantLoot(){
+var a = Math.floor((Math.random() * 105));
+var b = Math.floor((Math.random() * 105));
+var c = Math.floor((Math.random() * 20));
+var out = common[a] + ", " + common[b] + ", and " + commonGold[c];
+document.getElementById("commonerOutput2").innerHTML = out;
+}
+    
+function banditPocket(){
+var x = Math.floor((Math.random() * 15));
+    
+    if (x<5){var a = Math.floor((Math.random() * 105));
+            var out = common[a]}
+    else if (x>9){var b = Math.floor((Math.random() * 60));
+                 var out = banditWeap[b]}
+    else {var c = Math.floor((Math.random() * 20));
+         var out = banditGold[c];}
+document.getElementById("banditOutput").innerHTML = out;
+}
+    
+function banditLoot(){
+var a = Math.floor((Math.random() * 105));
+var b = Math.floor((Math.random() * 60));
+var c = Math.floor((Math.random() * 20));
+var out = common[a] + ", " + banditWeap[b] + ", and " + banditGold[c];
+document.getElementById("banditOutput2").innerHTML = out;
+}
+    
+    function merchantPocket(){
+var x = Math.floor((Math.random() * 22));
+    
+    if (x<5){var a = Math.floor((Math.random() * 105));
+            var out = common[a]}
+    else if (x>12){var b = Math.floor((Math.random() * 20));
+                 var out = merchantTrinket[b]}
+    else {var c = Math.floor((Math.random() * 20));
+         var out = merchantGold[c];}
+document.getElementById("merchantOutput").innerHTML = out;
+}
+    
+function merchantLoot(){
+var a = Math.floor((Math.random() * 105));
+var d = Math.floor((Math.random() * 105));
+var e = Math.floor((Math.random() * 30));
+var b = Math.floor((Math.random() * 30));
+var c = Math.floor((Math.random() * 20));
+var out = common[a] + ", " + common[d] + ", " + merchantTrinket[b] + ", " + merchantTrinket[e] + ", and " + merchantGold[c];
+document.getElementById("merchantOutput2").innerHTML = out;
+}
+
+</script>
+</head>
+
+<body>
+<div style="margin-left:auto;margin-right:auto;width:60%;">
+<h1 style="text-align: center; font-size:200%;">Loots</h1>
+For when your players decide to pick a pocket or kill a noble.
+<hr>
+<h2>Commoner</h2>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="peasantPocket()">Pick pocket</button> 
+<span id="commonerOutput" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="peasantLoot()">Loot body</button> 
+<span id="commonerOutput2" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<br>
+    <h2>Bandit/Criminal</h2>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="banditPocket()">Pick pocket</button> 
+<span id="banditOutput" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="banditLoot()">Loot body</button> 
+<span id="banditOutput2" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<br>
+
+    <h2>Merchant/Noble</h2>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="merchantPocket()">Pick pocket</button> 
+<span id="merchantOutput" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="merchantLoot()">Loot body</button> 
+<span id="merchantOutput2" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<br>
+
+</div>
