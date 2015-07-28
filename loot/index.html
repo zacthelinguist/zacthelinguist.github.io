@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>DnD Loot Generator</title>
+<title>Loot!</title>
 <script>
 
 var common = [
@@ -54,6 +54,7 @@ var banditGold = [
 			  "a pouch of 3 platinum pieces", "crystal vial of gold dust (15gp)", "4 gold pieces", "a pouch of foreign gold coins  (15gp)", "a set of intricate golden cufflinks (10gp each)",
 "golden brooch (5gp)","1 gold bar (5gp)","diamond ring (40gp)","pouch of gemstones (20gp)","pouch of gemstones (30gp)"];
 
+    var trinket = ["decorative gold goblet (10gp)","jade statue of a skull","crystal ball in satin bag","steel flute","crystal arrowhead","decorative porcelain teacup","brass bell","pouch of wolf teeth","glass eyeball","crystal flask of clear liquid (minor healing potion)","wooden figurine of a dragon","scorched steel dagger wrapped in cloth","steel tuning fork","jar of acorns","wooden boomerang","blue leather glove covered in intricate writing","red and white beaded bracelet","cracked wooden teacup","simple iron knife with white wooden handle","ivory hunting horn wrapped in twine"];
     
 function peasantPocket(){
 var x = Math.floor((Math.random() * 10));
@@ -116,13 +117,32 @@ var out = common[a] + ", " + common[d] + ", " + merchantTrinket[b] + ", " + merc
 document.getElementById("merchantOutput2").innerHTML = out;
 }
 
+    function lockBox(){
+        var x = Math.floor((Math.random() * 10));
+var a = Math.floor((Math.random() * 20));
+var b = Math.floor((Math.random() * 20));
+        var c = Math.floor((Math.random() * 20));
+        var d = Math.floor((Math.random() * 20));
+        
+        
+        if (x<5){
+var out = trinket[a] + ", " + merchantGold[b] + ", " + merchantGold[c];
+document.getElementById("boxOut").innerHTML = out;
+}
+        else {
+            var out = merchantGold[a] + ", " + trinket[b] + ", " + merchantTrinket[c] + ", and " + banditGold[d];
+document.getElementById("boxOut").innerHTML = out;
+        }
+        
+    }
+    
 </script>
 </head>
 
 <body>
 <div style="margin-left:auto;margin-right:auto;width:60%;">
 <h1 style="text-align: center; font-size:200%;">Loots</h1>
-For when your players decide to pick a pocket or kill a noble.
+    For when your players decide to pick a pocket or kill a noble.
 <hr>
 <h2>Commoner</h2>
 <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="peasantPocket()">Pick pocket</button> 
@@ -142,6 +162,10 @@ For when your players decide to pick a pocket or kill a noble.
 <span id="merchantOutput" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
 <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="merchantLoot()">Loot body</button> 
 <span id="merchantOutput2" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span><br/>
+<br>
+        <h2>Lockbox Contents</h2>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="lockBox()">Pick lock</button> 
+<span id="boxOut" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span>
 <br>
 
 </div>
