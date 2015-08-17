@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>Loot!</title>
@@ -24,20 +25,25 @@ var common = [
 			 "flint and steel", "vial of magnetic shavings in water", "bit of salted cooking lard", "magnetic stone", "piece of hard candy",
 			 "dried up honeycomb", "folded paper w/ a poem", "coaster from the Damp Boulder", "shard of seaglass", "silver earring (2sp)",
 			 "book of 10 matches (20gp)", "lute pick", "a single glove", "knit cap", "vial of cooking oil", 
-			 "vial of whore's perfume", "tin of spices", "chunk of rock salt", "pouch of dried peppercorns", "sprig of wintersage"];
-
+			 "vial of whore's perfume", "tin of spices", "chunk of rock salt", "pouch of dried peppercorns", "sprig of wintersage",
+                "small notebook with pressed flowers","packet of chalk","small brass bell","vial of spearmint syrup","a single throwing dart",
+                "spider in a jar","strip of fruit leather","spool of green thread","counterfeit gold piece","folded treasure map"];
+//common number = 115
+    
 var commonGold = ["1 silver", "2 silver", "3 silver", "4 silver", "5 silver",
 			  "6 silver", "silver pinky ring (2 silver)", "2 gold pieces", "1 copper", "a pouch of 12 copper",
 			  "1 silver", "2 silver", "3 silver", "4 silver", "5 silver",
 			  "a pouch of 5 silver", "a silver bar (5 sp)", "1 gold piece", "a pouch of 3 gold teeth (6gp)", "a pouch of 8 copper"];
 
-
 var banditWeap = ["iron dagger", "steel dagger", "steel boning knife",
-                  "bag of caltrops", "bag of ball bearings", "2 smokesticks", "set of lockpicking tools", "forged documents", "3 steel throwing stars", "iron handaxe", "5 darts", "forger's kit", "disguise kit", "medicine kit", "vial of poison", "flask of oil", "flask of acid", "brass knuckles", "stilletto dagger", "chain whip", "crossbow + 10 bolts", "bag of 5 signet rings (stolen)", "skeleton key", "iron club", "net", "crowbar", "grappling hook", "iron dagger", "steel dagger", "javelin", "iron hammer", "steel dagger", "steel club", "brass knuckles", "decorative brass dagger", "manacles", "monarchic stamp", "climber's kit", "steel mirror", "forged documents", "5 steel throwing stars", "copper handaxe", "10 darts", "iron throwing hammer",
- "set of cheater's dice (snake-eyes)",  "set of cheater's dice (all sixes)",  "set of cheater's dice (all sevens)",  "set of cheater's dice (weighted)", "trick playing cards", "jeweler's tools", "steel stilletto dagger", "iron crowbar", "sword-in-a-staff", "pocket sand!",
-                  "iron dagger", "steel dagger", "steel butcher's knife",
-                  "bag of caltrops", "bag of ball bearings", "2 smokesticks","steel trip wire","set of brass throwing daggers","rusty dagger","rusty handaxe"
+                "iron handaxe", "5 darts", "brass knuckles", "steel stilletto dagger", "chain whip", "iron club", "javelin", "steel sickle", "5 steel throwing stars", "light iron hammer", "wooden club", "sling and 10 pellets", "shortbow + 5 arrows", "bamboo blowgun + 5 darts", "2 javelins", "spiked leather maul", "steel dagger"
 			 ];
+ //bandit weapon count = 20
+    
+var banditTool = [
+                  "bag of caltrops", "bag of ball bearings", "2 smokesticks", "set of lockpicking tools", "forged documents", "forger's kit", "disguise kit", "medicine kit", "vial of poison", "flask of oil", "flask of acid", "brass knuckles", "bag of 5 signet rings (stolen)", "skeleton key", "iron club", "net", "crowbar", "grappling hook", "iron dagger", "manacles", "monarchic stamp", "climber's kit", "steel mirror", "forged documents", "5 steel throwing stars", "set of cheater's dice (snake-eyes)",  "set of cheater's dice (all sixes)",  "set of cheater's dice (all sevens)",  "set of cheater's dice (weighted)", "trick playing cards", "jeweler's tools", "pocket sand!", "flask of alchemist's fire","whizzbang confetti stone","climber's gloves (small)","bag of glass dust","whizzbang flash-a-light stone","coiled length of wire","whizzbang stink stone","magnifying glass","collapsible bucket","flask of noxious fumejuice", "flask of pitch", "small bubble level", "sack with a false bottom"
+			 ];
+ //bandit tools count = 45
 
 var banditGold = [
 			  "pouch of 25 silver", "golden pinky ring (2gp)", "2 gold pieces", "pouch of 10 gold", "a pouch of 12 gold pieces",
@@ -54,12 +60,17 @@ var banditGold = [
 			  "a pouch of 3 platinum pieces", "crystal vial of gold dust (15gp)", "4 gold pieces", "a pouch of foreign gold coins  (15gp)", "a set of intricate golden cufflinks (10gp each)",
 "golden brooch (5gp)","1 gold bar (5gp)","diamond ring (40gp)","pouch of gemstones (20gp)","pouch of gemstones (30gp)"];
 
-    var trinket = ["decorative gold goblet (10gp)","jade statue of a skull","crystal ball in satin bag","steel flute","crystal arrowhead","decorative porcelain teacup","brass bell","pouch of wolf teeth","glass eyeball","crystal flask of clear liquid (minor healing potion)","wooden figurine of a dragon","scorched steel dagger wrapped in cloth","steel tuning fork","jar of acorns","wooden boomerang","blue leather glove covered in intricate writing","red and white beaded bracelet","cracked wooden teacup","simple iron knife with white wooden handle","ivory hunting horn wrapped in twine"];
+    var trinket = ["decorative gold goblet (10gp)","jade statue of a skull","crystal ball in satin bag","steel flute","crystal arrowhead","decorative porcelain teacup","nice brass bell","pouch of wolf teeth","glass eyeball","crystal flask of clear liquid (minor healing potion)","wooden figurine of a dragon","scorched steel dagger wrapped in cloth","steel tuning fork","jar of acorns","wooden boomerang","blue leather glove covered in intricate writing","red and white beaded bracelet","cracked wooden teacup","simple iron knife with white wooden handle","ivory hunting horn wrapped in twine"];
+    
+    
+    var house = ["brass candlesticks (1gp each)","black crystal globe (10gp)","silver holy symbol (5sp)","small gilded statuette of a bear (2gp)","small gilded statuette of a turtle (2gp)","small gilded statuette of a winged horse (2gp)","small gilded statuette of a moose (2gp)","small gilded statuette of a cat (2gp)","arcane scroll (level 1 spell)","set of fine silverware (5gp)","decorative sword with gemstones (20gp)","small expressionist painting","large tome of family ancestry","silver flute (20gp)","small lute (20gp)","decorative bells (2gp)","bust of an elven nobleman","set of exotic spices","golden goblet (10gp)","bag of gems","set of fine crustal cocktail glasses","gilded carving knife (1gp)","fancy barber's kit (razor, strop, combs, etc)","wheel of wax-dipped exotic cheese","crystal hourglass (10gp)","small decorative vase","gilded serving tray","aged steel helm","monkish gong (5gp)","crystal decanter of whiskey","set of quills and ink","ivory hunting horn","gilded ash-wood cigarbox (with 2 cigars left)","set of elvish watercolor paints","small steel lockbox","3ft x 5ft wall mirror w/ decorative frame (100gp)","set of decorative china","cracked, rolled up treasure map","small glockenspiel","small mechanical bird","iron lockbox", "steel lockbox","iron lockbox","small wooden chest","small wooden crate"
+        
+        ];
     
 function peasantPocket(){
 var x = Math.floor((Math.random() * 10));
 if (x<6){
-var a = Math.floor((Math.random() * 105));
+var a = Math.floor((Math.random() * 115));
 var out = common[a];}
 else {
 var a = Math.floor((Math.random() * 20));
@@ -68,37 +79,40 @@ document.getElementById("commonerOutput").innerHTML = out;
 }
 
 function peasantLoot(){
-var a = Math.floor((Math.random() * 105));
-var b = Math.floor((Math.random() * 105));
+var a = Math.floor((Math.random() * 115));
+var b = Math.floor((Math.random() * 115));
 var c = Math.floor((Math.random() * 20));
 var out = common[a] + ", " + common[b] + ", and " + commonGold[c];
 document.getElementById("commonerOutput2").innerHTML = out;
 }
     
 function banditPocket(){
-var x = Math.floor((Math.random() * 15));
+var x = Math.floor((Math.random() * 20));
     
-    if (x<5){var a = Math.floor((Math.random() * 105));
+    if (x<5){var a = Math.floor((Math.random() * 115));
             var out = common[a]}
-    else if (x>9){var b = Math.floor((Math.random() * 60));
+    else if (x>4&&x<10){var b = Math.floor((Math.random() * 20));
                  var out = banditWeap[b]}
+    else if (x>15){var b = Math.floor((Math.random() * 45));
+                 var out = banditTool[b]}
     else {var c = Math.floor((Math.random() * 20));
          var out = banditGold[c];}
 document.getElementById("banditOutput").innerHTML = out;
 }
     
 function banditLoot(){
-var a = Math.floor((Math.random() * 105));
-var b = Math.floor((Math.random() * 60));
+var a = Math.floor((Math.random() * 115));
+var b = Math.floor((Math.random() * 20));
+var d = Math.floor((Math.random() * 45));
 var c = Math.floor((Math.random() * 20));
-var out = common[a] + ", " + banditWeap[b] + ", and " + banditGold[c];
+var out = common[a] + ", " + banditWeap[b] + ", " + banditTool[d] + ", and " + banditGold[c];
 document.getElementById("banditOutput2").innerHTML = out;
 }
     
     function merchantPocket(){
 var x = Math.floor((Math.random() * 22));
     
-    if (x<5){var a = Math.floor((Math.random() * 105));
+    if (x<5){var a = Math.floor((Math.random() * 115));
             var out = common[a]}
     else if (x>12){var b = Math.floor((Math.random() * 20));
                  var out = merchantTrinket[b]}
@@ -108,8 +122,8 @@ document.getElementById("merchantOutput").innerHTML = out;
 }
     
 function merchantLoot(){
-var a = Math.floor((Math.random() * 105));
-var d = Math.floor((Math.random() * 105));
+var a = Math.floor((Math.random() * 115));
+var d = Math.floor((Math.random() * 115));
 var e = Math.floor((Math.random() * 30));
 var b = Math.floor((Math.random() * 30));
 var c = Math.floor((Math.random() * 20));
@@ -135,6 +149,18 @@ document.getElementById("boxOut").innerHTML = out;
         }
         
     }
+    
+        function houseLoot(){
+var w = Math.floor((Math.random() * 45));
+var x = Math.floor((Math.random() * 45));
+var y = Math.floor((Math.random() * 45));
+var z = Math.floor((Math.random() * 45));
+            var c = Math.floor((Math.random() *20));
+            var e = Math.floor((Math.random() * 30));
+   
+    var out = house[w] + ", " + house[x] + ", " + house[y] + ", " + merchantTrinket[e] + ", " + merchantGold[c]; + ", and " + house[z];
+document.getElementById("houseOut").innerHTML = out;
+}
     
 </script>
 </head>
@@ -166,6 +192,10 @@ document.getElementById("boxOut").innerHTML = out;
         <h2>Lockbox Contents</h2>
 <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="lockBox()">Pick lock</button> 
 <span id="boxOut" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span>
+<br>
+    <h2>Random Valuables</h2>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="houseLoot()">Loot the house</button> 
+<span id="houseOut" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span>
 <br>
 
 </div>
