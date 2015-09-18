@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>Loot!</title>
@@ -204,6 +205,21 @@ var b = Math.floor((Math.random() * 20));
         
     }
     
+    
+var powers = ["+1 to hit", "crits on 19-20","+1d4 radiant damage against undead/fiends","+1 to AC against ranged attacks","+1 to AC against melee attacks","double attack on d12 roll of 12","+1d4 Temp HP on kill","knocks target prone DC12 DEX","knocks target back 10ft DC12 STR","+1d4 poison damage 3x per day","grants +1AC to nearby ally","advantage against flying creatures","reroll crit failure (once per attack)","2x charge Light spell per day","add WIS mod to hit x3 per day","add WIS mod to damage x3 per day","+2 to AC x2 per day as reaction","+1 to initiative","+1d4 fire damage x2 per day","+1d4 radiant damage x2 per day","+1d4 acid damage x2 per day","+1d4 cold damage x2 per day","x1 charge Bless spell per day","gain 1d6 Temp HP on critical hit","grant 1d4 Temp HP to ally x2 per day","deals 2d4 or 2d6 instead of normal damage","add DEX mod to hit x3 per day","add DEX mod to damage x3 per day","2nd attack with this weapon for 1d4 damage as bonus action","grapples target DC12 DEX"];
+
+var weapons = ["short sword", "long sword", "throwing hammer", "warhammer","chain whip","javelin x3","throwing dart x3","scimitar","mace","morningstar","glaive","bowstaff","short bow","longbow","throwing axe","greataxe","arrow x3","brass knuckles","rapier","dagger","spear","war pick"];
+
+
+
+function magicWeapon(){
+ var a = Math.floor((Math.random() *22));
+ var b = Math.floor((Math.random() * 30));
+var out = weapons[a] + ", " + powers[b];
+document.getElementById("weaponOut").innerHTML = out;
+};
+
+
         function houseLoot(){
 var w = Math.floor((Math.random() * 55));
 var x = Math.floor((Math.random() * 55));
@@ -263,6 +279,9 @@ document.getElementById("potionOut").innerHTML = out;
             <h3>Consumable</h3>
 <button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="potionGen()">Taste Potion</button> 
 <span id="potionOut" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span>
+            <h3>Magic Weapon</h3>
+<button style="text-align: center; font-size:100%; margin:2pt;" type="button" onclick="magicWeapon()">Attune weapon</button> 
+<span id="weaponOut" style="margin-left:auto;margin-right:auto;margin-top:0pt;margin-bottom:0pt;"></span>
     
 </div>
 </div>
