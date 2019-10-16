@@ -2,7 +2,22 @@
 <html>
 <head>
 <title>Zac Smith - Press</title>
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+   <style media="screen">
+.imageFlex{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media
+ only screen and (max-device-width: 480px) {
+  .imageFlex{
+    justify-content: center;
+    flex-direction: column;
+     padding: 1em;
+  }
+}
+</style>
 <style>
 
 body {
@@ -158,8 +173,8 @@ Representation: <a href="mailto:giacomopope@gmail.com">Giacomo Pope at Flat Dog 
      </div>
    
     <h3>Author Photos</h3>
-   <div style="margin:auto;width:60%">   
- <a href="zac_smith_author1.png" target="_blank"><img src="zac_smith_author1.png" style="width:300px"></a>  <a href="zac_smith_author2.png" target="_blank"><img src="zac_smith_author2.png" style="width:300px"></a><br>Photo Credit: Eric Quesada
+      <div class="imageFlex">
+ <a href="zac_smith_author1.png" target="_blank"><img src="zac_smith_author1.png" style="width:300px" alt="Author Photo 1"></a>  <a href="zac_smith_author2.png" target="_blank"><img src="zac_smith_author2.png" style="width:300px" alt="Author Photo 2"></a><br>Photo Credit: Eric Quesada
    </div>
    <br>
  
