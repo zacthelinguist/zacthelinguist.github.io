@@ -55,13 +55,32 @@ border-color: #888888;
 line-height: 1.7;
 }
 
+ .fun {
+  background-image: 
+    linear-gradient(to right, green,red,orange,green,yellow,green,blue,indigo,green,violet,red,green); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 60s linear infinite;
+}
+
+@keyframes rainbow-animation {
+    to {
+        background-position: 4500vh;
+    }
+}
+ 
 a{
 text-decoration: none;
 font-size:15pt;
 font-weight:bold;
 
-color: #80bf25;
-text-decoration: none;
+background-image: 
+    linear-gradient(to right, green,red,orange,green,yellow,green,blue,indigo,green,violet,red,green); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 60s linear infinite;
+}
+
 }
 a:active {
 color: #cccccc;
